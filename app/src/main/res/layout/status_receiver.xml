@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.bittelasia.holidayinn.data.manager.MarqueeView
+                android:id="@+id/myBroadcast"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="#002CFF"
+                android:visibility="gone"
+                app:speed="40dp"
+                app:text_color="@android:color/white"
+                app:text_shadowColor="@android:color/black"
+                app:text_size="30sp"
+                app:txt_dx="1.0"
+                app:txt_dy="1.0"
+                app:txt_radius="1.0"
+                app:txt_spacing="15dp" />
+
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_pop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#CC000000"
+            android:padding="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_pop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+
+            <TextView
+                android:id="@+id/tv_pop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/itc"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="@id/iv_pop"
+                app:layout_constraintStart_toStartOf="@id/iv_pop"
+                app:layout_constraintTop_toBottomOf="@id/iv_pop"
+                tools:text="LAZADA COUPON UP TO 10%" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/alertParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#000000"
+                app:layout_constraintBottom_toTopOf="@id/g4"
+                app:layout_constraintEnd_toStartOf="@id/g2"
+                app:layout_constraintStart_toEndOf="@id/g1"
+                app:layout_constraintTop_toBottomOf="@id/g3">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieAnimationView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/i5"
+                    app:layout_constraintEnd_toStartOf="@+id/i4"
+                    app:layout_constraintStart_toStartOf="@+id/i2"
+                    app:layout_constraintTop_toTopOf="@+id/i1"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/alert" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_em"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/i5"
+                    app:layout_constraintEnd_toStartOf="@+id/i4"
+                    app:layout_constraintStart_toStartOf="@+id/i2"
+                    app:layout_constraintTop_toTopOf="@+id/i1"
+                    app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/itc"
+                    android:gravity="center"
+                    android:text="@string/emergency_alert_system"
+                    android:textColor="#FF0000"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/i3"
+                    app:layout_constraintEnd_toStartOf="@+id/i4"
+                    app:layout_constraintStart_toStartOf="@+id/i2"
+                    app:layout_constraintTop_toTopOf="@+id/i5" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_centerHorizontal="true"
+                    app:layout_constraintBottom_toTopOf="@+id/i6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/i3">
+
+                    <com.bittelasia.holidayinn.data.manager.MarqueeView
+                        android:id="@+id/emergency"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="#002CFF"
+                        android:visibility="gone"
+                        app:speed="40dp"
+                        app:text_color="@android:color/white"
+                        app:text_shadowColor="@android:color/black"
+                        app:text_size="30sp"
+                        app:txt_dx="1.0"
+                        app:txt_dy="1.0"
+                        app:txt_radius="1.0"
+                        app:txt_spacing="15dp" />
+
+                </FrameLayout>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/i5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent=".75" />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/i6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent=".95" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/i3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent=".85" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/i4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".75" />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/i1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent=".15" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/i2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".25" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/g1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".0" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/g2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/g3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".0" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/g4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

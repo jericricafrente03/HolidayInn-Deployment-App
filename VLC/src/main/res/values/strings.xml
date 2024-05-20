@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VLC</string>
+    <string name="desc">Description</string>
+    <string name="loading">LOADING</string>
+</resources>

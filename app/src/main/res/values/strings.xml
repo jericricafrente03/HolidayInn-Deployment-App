@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Holidayinn</string>
+    <string name="emergency_alert_system">EMERGENCY ALERT SYSTEM</string>
+    <string name="press">Press</string>
+    <string name="to_view_channel_list">to view channel list</string>
+    <string name="description">description</string>
+</resources>
